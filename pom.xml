@@ -86,7 +86,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-
+				<configuration>
+        <packagingExcludes>WEB-INF/lib/websocket-*.jar</packagingExcludes>
+    </configuration>
 			</plugin>
 			<plugin>
 				<groupId>com.google.cloud.tools</groupId>
