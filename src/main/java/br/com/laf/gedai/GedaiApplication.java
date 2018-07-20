@@ -1,12 +1,40 @@
 package br.com.laf.gedai;
 
+import java.io.IOException;
+
+import javax.servlet.GenericServlet;
+import javax.servlet.Servlet;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.Bean;
 
-@SpringBootApplication(exclude = { SecurityAutoConfiguration.class })
-public class GedaiApplication {
+@SpringBootApplication
+public class GedaiApplication extends SpringBootServletInitializer {
 
+	@SuppressWarnings("serial")
+	@Bean
+	public Servlet dispatcherServlet() {
+		return new GenericServlet() {
+			@Override
+			public void service(ServletRequest req, ServletResponse res)
+					throws ServletException, IOException {
+				res.setContentType("text/plain");
+				res.getWriter().append("Hello World");
+			}
+		};
+	}
+
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(GedaiApplication.class);
+	}
+	
 	public static void main(String[] args) {
 		SpringApplication.run(GedaiApplication.class, args);
 	}
