@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head th:include="/inc/head"></head>
+<body>
+
+	<div class="container">
+		<div class="header">
+			<h3 id="label">Cadastro de Unidade</h3>
+		</div>
+
+		<form class="header" action="/cadastrarUnidade" id="form-unidade" method="Post">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label>Nome da Unidade</label> <input name="nome" type="text"
+							class="form-control" id="inputNome" placeholder="Nome" />
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label>Cidade</label> <input name="cidade" type="text"
+							class="form-control" id="inputCategoria" placeholder="Cidade" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-5">
+					<div class="form-group">
+						<label>Região</label> <select name="regiao" class="form-control">
+							<option value="Capital">Capital</option>
+							<option value="Interior">Interior</option>
+							<option value="LLitoral">Litoral</option>
+							<option value="Outra">Outra</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-5">
+					<div class="form-group">
+						<label>Atlética</label> <input name="atletica" type="text"
+							class="form-control" id="inputPalestrante" placeholder="Atlética" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-5">
+					<div class="form-group">
+						<label>Delegado</label> <input name="delegado" type="text"
+							class="form-control" id="inputPalestrante" placeholder="Delegado" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-5">
+					<div class="form-group">
+						<label>Delegado Suplente 1</label> <input name="delegadoSuplente1"
+							type="text" class="form-control" id="inputPalestrante"
+							placeholder="Delegado Suplente 1" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-5">
+					<div class="form-group">
+						<label>Delegado Suplente 2</label> <input name="delegadoSuplente2"
+							type="text" class="form-control" id="inputPalestrante"
+							placeholder="Delegado Suplente 2" />
+					</div>
+				</div>
+			</div>
+			<div class="text-left">
+				<button type="submit" class="btn btn-lg btn-primary">Cadastrar</button>
+				<a href="/" class="btn btn-default">Voltar</a>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head th:include="inc/head">
+<title>Gedai - LAF</title>
+</head>
+<body>
+	Tela de Login
+	<br> A fazer!!!!!
+	<br>
+	<a href="/cadastroUnidadeView">Tela de Cadastro de Unidade</a>
+	<a href="/cadastroPessoaView">Tela de Cadastro de Pessoa</a>
+
+	<div class="listaUnidades" th:unless="${#lists.isEmpty(unidades)}">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Nome			</th>
+					<th>Atlética</th>
+					<th>Região</th>
+					<th>Delegado</th>
+					<th>Delegado Suplente 1</th>
+					<th>Delegado Suplente 2</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="unidade : ${unidades}">
+					<td th:text="${{unidade.nome}}">Fatec Zona Sul </td>
+					<td th:text="${{unidade.atletica}}">Fatec Zona Sul</td>
+					<td th:text="${{unidade.regiao}}">Fatec Zona Sul</td>
+					<td th:text="${{unidade.delegado}}">Fatec Zona Sul</td>
+					<td th:text="${{unidade.delegadoSuplente1}}">Fatec Zona Sul</td>
+					<td th:text="${{unidade.delegadoSuplente2}}">Fatec Zona Sul</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>
