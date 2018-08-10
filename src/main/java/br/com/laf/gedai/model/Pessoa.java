@@ -37,9 +37,9 @@ public class Pessoa implements Serializable {
 	private String ra;
 	@Column(name = "rg")
 	private String rg;
-	@ManyToOne
-	@JoinColumn(name = "unidade")
-	private Unidade unidade;
+//	@ManyToOne
+//	@JoinColumn(name = "unidade")
+//	private Unidade unidade;
 	@Column(name = "curso")
 	private String curso;
 	@NotNull
@@ -51,8 +51,8 @@ public class Pessoa implements Serializable {
 	private Integer anoMatricula;
 	@Column(name = "semmat")
 	private Integer semestreMatricula;
-	@Column(name = "turno")
-	private String turno;
+//	@Column(name = "turno")
+//	private String turno;
 	//@NotNull
 	@Column(name = "img_atestado")
 	private String caminhoAtestado;
@@ -86,12 +86,12 @@ public class Pessoa implements Serializable {
 	public void setRg(String rg) {
 		this.rg = rg;
 	}
-	public Unidade getUnidade() {
-		return unidade;
-	}
-	public void setUnidade(Unidade unidade) {
-		this.unidade = unidade;
-	}
+//	public Unidade getUnidade() {
+//		return unidade;
+//	}
+//	public void setUnidade(Unidade unidade) {
+//		this.unidade = unidade;
+//	}
 	public String getCurso() {
 		return curso;
 	}
@@ -122,12 +122,12 @@ public class Pessoa implements Serializable {
 	public void setSemestreMatricula(Integer semestreMatricula) {
 		this.semestreMatricula = semestreMatricula;
 	}
-	public String getTurno() {
-		return turno;
-	}
-	public void setTurno(String turno) {
-		this.turno = turno;
-	}
+//	public String getTurno() {
+//		return turno;
+//	}
+//	public void setTurno(String turno) {
+//		this.turno = turno;
+//	}
 	public String getCaminhoAtestado() {
 		return caminhoAtestado;
 	}
@@ -136,9 +136,9 @@ public class Pessoa implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "Pessoa [id=" + id + ", nome=" + nome + ", ra=" + ra + ", rg=" + rg + ", unidade=" + unidade + ", curso="
+		return "Pessoa [id=" + id + ", nome=" + nome + ", ra=" + ra + ", rg=" + rg + ", unidade= curso="
 				+ curso + ", email=" + email + ", celular=" + celular + ", anoMatricula=" + anoMatricula
-				+ ", semestreMatricula=" + semestreMatricula + ", turno=" + turno + ", caminhoAtestado="
+				+ ", semestreMatricula=" + semestreMatricula + ", caminhoAtestado="
 				+ caminhoAtestado + "]";
 	}
 }

@@ -5,35 +5,19 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
-import br.com.laf.gedai.model.Unidade;
-import br.com.laf.gedai.service.UnidadeService;
+import br.com.laf.gedai.model.Pessoa;
+import br.com.laf.gedai.service.PessoaService;
 
 @RestController
 public class ViewController {
 	
 	@Autowired
-	private UnidadeService unidadeService;
+	private PessoaService pessoaService;
 	
 	@GetMapping("/")
-	public ModelAndView index() {
-		List<Unidade> unidades = unidadeService.listar();
-		ModelAndView mv = new ModelAndView("/index");
-		mv.addObject("unidades", unidades);
-		return mv;
-	}
-
-	@GetMapping("/cadastroUnidadeView")
-	public ModelAndView cadastroUnidadeView() {
-		return new ModelAndView("unidade/cadastro-unidade");
-	}
-	
-	@GetMapping("/cadastroPessoaView")
-	public ModelAndView cadastroAtletaView() {
-		List<Unidade> unidades = unidadeService.listar();
-		ModelAndView mv =  new ModelAndView("pessoa/cadastro-pessoa");
-		mv.addObject("unidades", unidades);
-		return mv;
+	public String index() {
+		List<Pessoa> pessoa = pessoaService.listar();
+		return pessoa.toString();
 	}
 }
