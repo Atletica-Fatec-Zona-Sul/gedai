@@ -38,7 +38,7 @@ public class Pessoa implements Serializable {
 	@Column(name = "rg")
 	private String rg;
 	@ManyToOne
-	@JoinColumn(name = "id_unidade")
+	@JoinColumn(name = "unidade")
 	private Unidade unidade;
 	@Column(name = "curso")
 	private String curso;
@@ -47,14 +47,14 @@ public class Pessoa implements Serializable {
 	private String email;
 	@Column(name = "celular")
 	private String celular;
-	@Column(name = "ano_matricula")
+	@Column(name = "anomat")
 	private Integer anoMatricula;
-	@Column(name = "semestre_matricula")
+	@Column(name = "semmat")
 	private Integer semestreMatricula;
 	@Column(name = "turno")
 	private String turno;
 	//@NotNull
-	@Column(name = "caminho_atestado")
+	@Column(name = "img_atestado")
 	private String caminhoAtestado;
 //	@NotNull
 //	@Column(name = "tipo_pessoa")
