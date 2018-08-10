@@ -23,17 +23,17 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		   <INSTANCE_CONNECTION_NAME>gedai-laf:southamerica-east1:gedai-laf</INSTANCE_CONNECTION_NAME>
-    <user>root</user>
-    <password>115599</password>
-    <database>gedai</database>
+		<INSTANCE_CONNECTION_NAME>gedai-laf:southamerica-east1:gedai-laf</INSTANCE_CONNECTION_NAME>
+		<user>root</user>
+		<password>115599</password>
+		<database>gedai</database>
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.google.appengine</groupId>
-			<artifactId>appengine-api-1.0-sdk</artifactId>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.google.appengine</groupId> -->
+<!-- 			<artifactId>appengine-api-1.0-sdk</artifactId> -->
+<!-- 		</dependency> -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -54,18 +54,20 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		<!-- Driver injected at runtime by the use of <use-google-connector-j> in appengine-web.xml -->
-<dependency> <!-- Only used locally -->
-  <groupId>mysql</groupId>
-  <artifactId>mysql-connector-java</artifactId>
+		<!-- Driver injected at runtime by the use of <use-google-connector-j> 
+			in appengine-web.xml -->
+		<dependency> <!-- Only used locally -->
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
 
-</dependency>
-<dependency>
-  <groupId>com.google.cloud.sql</groupId>
-  <!-- If using MySQL 6.x driver, use mysql-socket-factory-connector-j-6 instead -->
-  <artifactId>mysql-socket-factory</artifactId>
-  <version>1.0.5</version>
-</dependency>
+		</dependency>
+		<dependency>
+			<groupId>com.google.cloud.sql</groupId>
+			<!-- If using MySQL 6.x driver, use mysql-socket-factory-connector-j-6 
+				instead -->
+			<artifactId>mysql-socket-factory</artifactId>
+			<version>1.0.5</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
